@@ -2,19 +2,24 @@
 
 ## Steps
 
-*Step 1: Install Django*
+***Step 1: Install Django***
 
-`pip install django
-`
-*Step 2: Create a Django Project*
+```python
+pip install django
+```
 
-`django-admin startproject myproject
+***Step 2: Create a Django Project***
 
-cd myproject`
+```python
+django-admin startproject myproject
 
-*Step 3: Create a Django App*
+cd myproject
+```
 
-`python3 manage.py startapp myapp
+***Step 3: Create a Django App***
+
+```
+python3 manage.py startapp myapp
 
 Add myapp to INSTALLED_APPS in myproject/settings.py:
 
@@ -34,47 +39,58 @@ INSTALLED_APPS = [
 
     'myapp',  # Add this line
 
-]`
+]
+```
 
-*Step 4: Create a Model (models.py)*
+***Step 4: Create a Model (models.py)***
 
-`Inside myapp/models.py, define a simple model for a Task:`
+```
+Inside myapp/models.py, define a simple model for a Task:
+```
 
 
-*Step 5: Apply Migrations*
+***Step 5: Apply Migrations***
 
-`Run the following commands:
+```
+Run the following commands:
 
 python3 manage.py makemigrations
 
 python3 manage.py migrate
-`
-*Step 6: Create a Form (forms.py)*
+```
 
-`Inside myapp/forms.py, create a form for adding tasks:`
+***Step 6: Create a Form (forms.py)***
 
-*Step 7: Create Views (views.py)
-*
-`Modify myapp/views.py to handle CRUD operations:`
+```
+Inside myapp/forms.py, create a form for adding tasks:
+```
+
+***Step 7: Create Views (views.py)***
+
+```
+Modify myapp/views.py to handle CRUD operations:
+```
 
 
-*Step 8: Create Templates (templates/)*
+***Step 8: Create Templates (templates/)***
 
-`Inside myapp/templates/, create HTML templates:
+```
+Inside myapp/templates/, create HTML templates:
 
 Task List (task_list.html)
 
 Task Form (task_form.html)
 
-Task Delete (task_confirm_delete.html)`
+Task Delete (task_confirm_delete.html)
+```
 
 
 ***Step 9: Configure URLs (urls.py)***
 
 ```
-`Modify myapp/urls.py:`
+Modify myapp/urls.py:
 
-`Modify myproject/urls.py to include myapp routes:
+Modify myproject/urls.py to include myapp routes:
 
 from django.contrib import admin
 from django.urls import path, include
