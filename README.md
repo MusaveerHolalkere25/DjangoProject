@@ -69,8 +69,9 @@ Task Form (task_form.html)
 Task Delete (task_confirm_delete.html)`
 
 
-*Step 9: Configure URLs (urls.py)*
+***Step 9: Configure URLs (urls.py)***
 
+```
 `Modify myapp/urls.py:`
 
 `Modify myproject/urls.py to include myapp routes:
@@ -81,10 +82,12 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
-]`
+]
+```
 
-*Step 10: Run the Django Server*
+***Step 10: Run the Django Server***
+```
+python manage.py runserver
 
-`python manage.py runserver
-
-Open the app in a browser: http://127.0.0.1:8000/`
+Open the app in a browser: http://127.0.0.1:8000/
+```
